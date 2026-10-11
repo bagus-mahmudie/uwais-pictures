@@ -1,0 +1,164 @@
+---
+layout: layouts/base.njk
+title: About Us
+
+description: Iko Uwais, the figure behind Uwais Pictures, leads a film production house driven by creative vision and high quality storytelling.
+keywords: iko uwais
+socialImage: /assets/img/og-uwais.jpg
+
+permalink: /en/about/
+lang: en
+translationKey: about
+---
+
+{% set leaders = [
+  {
+    name: "Iko Uwais",
+    role: "Chairman",
+    img: "/assets/img/about/iko-uwais.png",
+    alt: "iko-uwais"
+  },
+  {
+    name: "Yentenius Jerriel",
+    role: "Executive Chairman",
+    img: "/assets/img/about/iko-uwais-movies.png",
+    alt: "iko-uwais-movies"
+  },
+  {
+    name: "Ryan Santoso",
+    role: "Chief Executive Officer",
+    img: "/assets/img/about/iko-uwais-martial-arts.png",
+    alt: "iko-uwais-martial-arts"
+  },
+  {
+    name: "Adamy Nurdin",
+    role: "Chief Operating Officer",
+    img: "/assets/img/about/iko-uwais-best-movies.png",
+    alt: "iko-uwais-best-movies"
+  }
+] %}
+
+<section class="relative overflow-hidden pb-16 pt-20 mt-10 sm:mt-0 md:mt-20 lg:pb-12">
+  <div class="mx-auto max-w-6xl px-4 lg:px-0">
+
+    {# HERO TITLE + SUBTITLE #}
+    <div class="relative mb-6 md:mb-[90px]">
+      {# background siluet team (opsional, bisa ganti gambar sendiri) #}
+      <div class="pointer-events-none absolute inset-x-0 -top-50 -z-10 lg:block">
+        <img
+          src="/assets/img/bg-about.png"
+          alt=""
+          class="w-full h-full object-cover"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="text-center max-w-[832px] mx-auto">
+        <h1 class="text-[32px] md:text-[40px] lg:text-[46px] font-medium leading-tight text-white mb-8">
+          Uwais Pictures Delivers Global Action Led by Iko Uwais
+        </h1>
+        <p class="text-[18px] max-w-[600px] mx-auto leading-relaxed text-uwais-muted">
+          Our team delivers cinematic impact with movie maker expertise inspired by the world renowned movie maker <span class="font-semibold">Iko Uwais</span>.
+        </p>
+      </div>
+    </div>
+
+    {# LEADERS GRID #}
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4 mb-14">
+      {% for person in leaders %}
+        <article class="flex flex-col rounded-2xl bg-uwais-card-soft shadow-card p-4">
+          <div class="rounded-2xl overflow-hidden mb-4">
+            <img
+              src="{{ person.img }}"
+              alt="{{ person.alt }}"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+
+          <div>
+            <h2 class="text-[24px] md:text-[24px] font-medium text-white">
+              {{ person.name }}
+            </h2>
+            <p class="mt-1 text-[16px] md:text-[16px] text-uwais-muted">
+              {{ person.role }}
+            </p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    {# SECTION: OUR TALENT #}
+    <div class="space-y-10">
+
+      {# SECTION: OFFICIAL TEAM #}
+      <section class="rounded-3xl bg-uwais-card-soft shadow-card px-5 py-5 md:px-5 md:py-5">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] items-center">
+
+          <div class="mb-4 lg:mb-0">
+            <div class="overflow-hidden rounded-2xl">
+              <img
+                src="/assets/img/about/movie-maker.png"
+                alt="movie-maker"
+                class="w-full max-full object-fill"
+                loading="lazy"
+              >
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-3xl sm:text-5xl leading-normal font-medium text-white mb-4">
+              Official Team
+            </h2>
+            <p class="text-[16px] leading-relaxed text-uwais-muted mb-16">
+              Uwais Pictures is the official action team led by Iko Uwais, with expertise in fight design, 
+              choreography, and stunt coordination. With extensive experience alongside Iko Uwais across major local and international productions, 
+              the team collaborates with renowned filmmakers and movie makers worldwide, 
+              consistently delivering top-tier action and strengthening their reputation as one of the leading forces in the action genre with Iko Uwais.
+            </p>
+            
+          </div>
+
+        </div>
+      </section>
+
+      <section class="rounded-3xl bg-uwais-card-soft shadow-card px-5 py-5 md:px-5 md:py-5">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,.9fr)] items-center">
+          <div>
+            <h2 class="text-3xl sm:text-5xl leading-normal font-medium text-white mb-4">
+              Our Talent
+            </h2>
+            <p class="text-[16px] leading-relaxed text-uwais-muted mb-16">
+              Our talents consist of skilled professionals who bring Uwais Team’s action vision to life through expertise in fight design, 
+              choreography, and stunt performance. Their dedication strengthens our identity in action filmmaking, 
+              while our collaboration with movie makers and global movie maker networks helps expand Uwais Pictures’ international reach and global distribution.
+            </p>
+
+            <a
+              href="https://gersh.com/" rel="nofollow" target="_blank"
+              class="inline-flex items-center text-[18px]  justify-center rounded-full bg-[#E31E26] px-7 py-2.5 text-white shadow-soft transition hover:bg-uwais-red-soft"
+            >
+              <span>Visit Gersh</span>
+              <span class="ml-2 text-[18px]" aria-hidden="true">➜</span>
+            </a>
+          </div>
+
+          <div class="order-first lg:order-none">
+            <div class="overflow-hidden rounded-2xl">
+              <img
+                src="/assets/img/about/Iko-Uwais-Movie-Maker.png"
+                alt="Iko-Uwais-Movie-Maker"
+                class="w-full max-full object-fill"
+                loading="lazy"
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+    </div>
+
+  </div>
+</section>

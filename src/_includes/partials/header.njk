@@ -1,0 +1,326 @@
+<header
+  id="main-header"
+  class="fixed top-0 left-0 w-full z-[9999] transition-transform duration-300 bg-transparent"
+>
+  {# =========================
+     NAV ITEMS
+     ========================= #}
+  {% if lang == "en" %}
+  {% set navItems = [
+    { href: "/en/",              label: "Home" },
+    { href: "/en/about/",        label: "About Us" },
+    { href: "/en/movie/",        label: "Our Movies" },
+    { href: "/en/news/",         label: "News" },
+    { href: "/en/contact/",      label: "Contact" }
+  ] %}
+{% else %}
+  {% set navItems = [
+    { href: "/",                 label: "Beranda" },
+    { href: "/tentang-kami/",    label: "Tentang Kami" },
+    { href: "/film/",            label: "Film Kami" },
+    { href: "/berita/",          label: "Berita" },
+    { href: "/kontak/",          label: "Kontak" }
+  ] %}
+{% endif %}
+
+  {% set currentUrl = page.url or "/" %}
+
+  {% set L = lang or "id" %}
+  {% if L == "en" %}
+    {% set searchStrings = {
+      title: "Search Movies",
+      label: "Movie Title",
+      placeholder: "e.g.: timur / ikatan darah / pasung",
+      button: "Search",
+      ariaOpen: "Search",
+      ariaClose: "Close search",
+      ariaLang: "Language",
+      ariaMenuOpen: "Open menu",
+      ariaMenuClose: "Close menu"
+    } %}
+  {% else %}
+    {% set searchStrings = {
+      title: "Cari Film",
+      label: "Judul Film",
+      placeholder: "contoh : timur / ikatan darah / pasung",
+      button: "Cari",
+      ariaOpen: "Search",
+      ariaClose: "Close search",
+      ariaLang: "Language",
+      ariaMenuOpen: "Open menu",
+      ariaMenuClose: "Close menu"
+    } %}
+  {% endif %}
+
+
+  <div class="mx-auto max-w-6xl px-4 py-6 lg:px-0">
+
+    {# ===== MOBILE PILL BAR ===== #}
+    <div class="lg:hidden">
+      <div class="flex items-center rounded-xl bg-[#101010] px-3 py-2 shadow-soft">
+
+        {# LEFT GROUP: Hamburger + Logo #}
+        <div class="flex items-center gap-3">
+          <!-- Hamburger -->
+          <button
+            type="button"
+            class="flex h-[44px] w-[44px] items-center justify-center rounded-xl text-white"
+            aria-label="Open menu"
+            aria-expanded="false"
+            data-mobile-open
+          >
+            <i class="bi bi-list text-2xl leading-none"></i>
+          </button>
+
+          <!-- Logo -->
+          <a href="{{ '/en/' if lang == 'en' else '/' }}" class="flex items-center gap-2" aria-label="{{ site.title }}">
+            <img
+              src="/assets/img/logo-uwais.png"
+              alt="{{ site.title }} logo"
+              class="h-7 w-auto"
+            >
+          </a>
+       
+        </div>
+
+        {# MOBILE: Language Switcher #}
+        <div class="ml-auto mr-2 relative group">
+          <button
+            type="button"
+            class="flex h-[40px] items-center gap-2 rounded-full bg-[#111111] px-3 text-white shadow-soft border border-white/10"
+            aria-label="{{ searchStrings.ariaLang }}"
+          >
+            {# globe #}
+            <img
+              src="/assets/img/globe-navbar.png"
+              alt="{{ site.title }} logo"
+              class="h-3 w-auto"
+            >
+
+            <span class="text-xs font-medium">{{ (lang or "id") | upper }}</span>
+
+            {# arrow #}
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="h-4 w-4 transition-transform duration-200 group-hover:rotate-180"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="absolute right-0 mt-2 w-40 rounded-xl bg-[#111111] border border-white/10 shadow-xl
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible transition"
+          >
+            {% set tKey = translationKey or page.fileSlug %}
+            {% set url_id = page.url %}
+            {% set url_en = "/en/" %}
+            {% for p in collections.all %}
+              {% if p.data.translationKey == tKey %}
+                {% if p.data.lang == "id" %}{% set url_id = p.url %}{% endif %}
+                {% if p.data.lang == "en" %}{% set url_en = p.url %}{% endif %}
+              {% endif %}
+            {% endfor %}
+            <ul class="py-2 text-sm">
+              <li><a href="{{ url_id }}" class="block px-4 py-2 hover:bg-white/10">Indonesia</a></li>
+              <li><a href="{{ url_en }}" class="block px-4 py-2 hover:bg-white/10">English</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {# RIGHT: Search #}
+        <button
+          type="button" data-search-open
+          class="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-[#111111] text-white shadow-soft border border-white/10"
+          aria-label="{{ searchStrings.ariaOpen }}"
+        >
+          <i class="bi bi-search text-[14px]"></i>
+        </button>
+
+      </div>
+    </div>
+
+    {# ===== DESKTOP LAYOUT ===== #}
+    <div class="hidden lg:flex items-center justify-between">
+
+      {# LOGO KIRI #}
+      <a href="{{ '/en/' if lang == 'en' else '/' }}" class="flex items-center gap-2" aria-label="{{ site.title }}">
+        <img src="/assets/img/logo-uwais.png" alt="{{ site.title }} logo" class="h-[66px] w-auto">
+      </a>
+
+      {# NAV DESKTOP - PILL TENGAH #}
+      <div class="hidden flex-1 items-center justify-center lg:flex">
+        <nav
+          class="inline-flex items-center rounded-full  bg-[#101010] px-4 py-2 shadow-soft"
+          aria-label="Primary"
+        >
+          {% for item in navItems %}
+            {% set isActive = (item.href == currentUrl) %}
+            <a
+              href="{{ item.href }}"
+              class="
+                rounded-full px-5 py-2 text-[16px] font-medium transition
+                {% if isActive %}
+                  bg-black text-white shadow-inner
+                {% else %}
+                  text-uwais-muted hover:text-white
+                {% endif %}
+              "
+              {% if isActive %}aria-current="page"{% endif %}
+            >
+              {{ item.label }}
+            </a>
+          {% endfor %}
+        </nav>
+      </div>
+
+      {# RIGHT GROUP: Language + Search (Desktop) #}
+      <div class="hidden lg:flex items-center gap-3">
+
+        {# LANGUAGE SWITCHER (Desktop) #}
+        <div class="relative group focus-within:opacity-100">
+          <button
+            type="button"
+            class="inline-flex h-[54px] items-center gap-2 rounded-full  bg-[#111111]
+                   px-4 text-white shadow-soft hover:bg-white/5 transition"
+            aria-label="Language"
+          >
+            {# globe #}
+            <img
+              src="/assets/img/globe-navbar.png"
+              alt="{{ site.title }} logo"
+              class="h-5 w-auto"
+            >
+
+            <span class="text-sm font-medium">{{ (lang or "id") | upper }}</span>
+
+            {# arrow #}
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 transition-transform duration-200 group-hover:rotate-180"
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="absolute right-0 mt-2 w-44 rounded-2xl bg-[#111111] border border-white/10 shadow-xl
+                   opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                   group-focus-within:opacity-100 group-focus-within:visible
+                   transition"
+          >
+            <ul class="py-2 text-sm">
+              <li>
+                <a href="{{ url_id }}" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10">
+                  <span>🇮🇩</span><span>Indonesia</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ url_en }}" class="flex items-center gap-2 px-4 py-2 hover:bg-white/10">
+                  <span>🇬🇧</span><span>English</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {# SEARCH (Desktop) #}
+        <button data-search-open
+          type="button"
+          class="inline-flex h-[54px] w-[54px] items-center justify-center rounded-full  bg-[#111111] text-white shadow-soft"
+          aria-label="Search"
+        >
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" />
+            <path d="M15.5 15.5L19 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+
+  {# MOBILE OVERLAY #}
+  <div class="fixed top-0 left-0 z-[9998] hidden w-screen h-dvh bg-black/60 lg:hidden" data-mobile-overlay></div>
+
+  {# MOBILE DRAWER (LEFT) #}
+  <aside
+    class="fixed top-0 left-0 z-[9999] hidden bg-black/80 h-dvh w-[78%] max-w-[340px]
+          border-r border-white/10
+          isolate shadow-[20px_0_60px_rgba(0,0,0,0.7)]
+          lg:hidden flex flex-col"
+    data-mobile-drawer
+  >
+    {# Close button #}
+    <button
+      type="button"
+      class="absolute right-5 top-5 flex h-9 w-9 items-center justify-center
+            rounded-full border border-white/30 text-white/80 hover:text-white"
+      aria-label="Close menu"
+      data-mobile-close
+    >
+      <i class="bi bi-x"></i>
+    </button>
+
+    <nav class="flex-1 pt-24 px-6 bg-uwais-bg overflow-y-auto" aria-label="Mobile Primary">
+      {% for item in navItems %}
+        {% set isActive = (item.href == currentUrl) %}
+        <a
+          href="{{ item.href }}"
+          class="block py-4 text-[18px] {% if isActive %}text-white font-medium{% else %}text-white/80{% endif %}"
+          {% if isActive %}aria-current="page"{% endif %}
+        >
+          {{ item.label }}
+        </a>
+        <div class="h-px w-full bg-white/20"></div>
+      {% endfor %}
+    </nav>
+  </aside>
+
+</header>
+
+{# SEARCH OVERLAY #}
+<div class="fixed inset-0 z-[10000] hidden bg-black/70" data-search-overlay></div>
+
+{# SEARCH MODAL #}
+<div class="fixed inset-0 z-[10001] hidden items-center justify-center p-4" data-search-modal>
+  <div
+    class="w-[92%] max-w-[420px] rounded-2xl border border-white/10 bg-uwais-bg p-5
+           shadow-[0_20px_80px_rgba(0,0,0,0.6)]"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="searchTitle"
+  >
+    <div class="flex items-center justify-between">
+      <p id="searchTitle" class="text-white text-lg font-medium">{{ searchStrings.title }}</p>
+
+      <button
+        type="button"
+        class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 hover:text-white"
+        aria-label="{{ searchStrings.ariaClose }}"
+        data-search-close
+      >
+        <i class="bi bi-x"></i>
+      </button>
+    </div>
+
+    <form class="mt-4 space-y-3" data-search-form>
+      <div>
+        <label class="block text-white/70 text-sm mb-2" for="movieKeyword">{{ searchStrings.label }}</label>
+        <input
+          id="movieKeyword"
+          type="text"
+          class="w-full rounded-xl bg-black/40 border border-white/10 px-4 py-3 text-white placeholder:text-white/40 outline-none focus:border-white/30"
+          placeholder="{{ searchStrings.placeholder }}"
+          autocomplete="off"
+          data-search-input
+        />
+      </div>
+
+      <p class="text-[16px] text-red-300 hidden" data-search-error></p>
+
+      <button type="submit" class="w-full rounded-xl bg-red-600 py-3 text-white font-medium hover:bg-red-500">
+        {{ searchStrings.button }}
+      </button>
+    </form>
+  </div>
+</div>

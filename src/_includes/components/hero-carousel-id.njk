@@ -1,0 +1,282 @@
+<section class="relative overflow-hidden pb-16 pt-20 mt-10 sm:mt-0 md:mt-20 lg:pb-12">
+
+  {# WRAPPER UNTUK TEKS + KOTAK DEKOR #}
+  <div class="relative mx-auto max-w-6xl px-4 overflow-hidden lg:px-0">
+
+    {# KOTAK KIRI & KANAN – PATTERN SEPERTI DESAIN #}
+    <div class="pointer-events-none absolute inset-0 hidden md:block">
+        <div class="mx-auto h-full max-w-6xl relative px-4 lg:px-0">
+
+        {# CLUSTER KIRI: 1 atas, 2 bawah #}
+        <div class="absolute left-0 top-[120px] -translate-y-1/2 -translate-x-10 h-56 w-64">
+            {# atas (tengah) #}
+            <span
+            class="absolute left-1/2 top-0 h-[84px] w-[84px] -translate-x-1/2 rounded-[18px] bg-white/5"
+            ></span>
+
+            {# bawah kiri #}
+            <span
+            class="absolute left-0 top-20 h-[84px] w-[84px] rounded-[18px] bg-white/5"
+            ></span>
+
+            {# bawah kanan #}
+            <span
+            class="absolute right-0 top-20 h-[84px] w-[84px] rounded-[18px] bg-white/5"
+            ></span>
+        </div>
+
+        {# CLUSTER KANAN: 2 atas, 1 bawah #}
+        <div class="absolute right-0 top-[240px] -translate-y-1/2 translate-x-10 h-56 w-64">
+            {# atas kiri #}
+            <span
+            class="absolute left-0 top-0 h-[84px] w-[84px] rounded-[18px] bg-white/5"
+            ></span>
+
+            {# atas kanan #}
+            <span
+            class="absolute right-0 top-0 h-[84px] w-[84px] rounded-[18px] bg-white/5"
+            ></span>
+
+            {# bawah tengah #}
+            <span
+            class="absolute left-1/2 top-20 h-[84px] w-[84px] -translate-x-1/2 rounded-[18px] bg-white/5"
+            ></span>
+        </div>
+
+        </div>
+    </div>
+
+    {# TEXT HERO (center) #}
+    <div class="relative z-10 mx-auto max-w-4xl text-center">
+      <h1 class="text-[30px] md:text-[40px] lg:text-[46px] font-medium leading-snug sm:leading-normal text-white">
+        Uwais Pictures Memproduksi 
+        <span class="sm:block">Film Aksi Terbaik Indonesia</span>
+      </h1>
+      <p class="mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-normal text-uwais-muted">
+        <span class="font-semibold">Uwais Pictures </span>Hadirkan Film Aksi Indonesia Kelas Dunia dengan Koreografi Spektakuler
+      </p>
+
+      <div class="mt-6 mb-8  sm:mt-10 sm:mb-10 lg:mt-[64px] lg:mb-[50px] flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <a
+          href="/film/"
+          class="inline-flex items-center sm:text-lg text-base justify-center rounded-full bg-[#E31E26] px-7 py-2.5 text-white shadow-soft transition hover:bg-uwais-red-soft"
+        >
+          <span>Jelajahi Film</span>
+          <span class="ml-2 sm:text-lg text-base" aria-hidden="true">➜</span>
+        </a>
+
+        <a
+          href="/tentang-kami/"
+          class="inline-flex items-center sm:text-lg text-base justify-center rounded-full bg-white/5 px-7 py-2.5 text-white/90 transition hover:bg-white/10"
+        >
+          Cerita Kami
+        </a>
+      </div>
+    </div>
+  </div>
+
+   {# HERO CAROUSEL #}
+  <div class="relative z-10 mt-10 mx-auto max-w-6xl px-4 lg:px-0">
+    <div
+      class="hero-carousel relative h-[260px] w-full md:h-[400px]"
+      data-hero-carousel
+      aria-label="Highlight film Uwais Pictures"
+    >
+      {# VIEWPORT SELEBAR CONTAINER #}
+      <div class="hero-viewport h-full overflow-hidden">
+        {# TRACK YANG DI-GESER #}
+        <div
+          class="hero-track flex h-full items-stretch transition-transform duration-500 ease-out"
+          data-hero-track
+        >
+
+          {# SLIDE 1 #}
+          <article class="hero-slide flex flex-none w-[70%] md:w-[58%] lg:w-[50%] px-1 md:px-1.5">
+            <div class="mx-auto flex h-full w-full max-w-[740px] flex-col overflow-hidden rounded-xl bg-black/40">
+              <figure class="relative h-full w-full">
+                <img
+                  src="/assets/img/uwais-picture-info.png"
+                  alt="uwais-picture-info"
+                  class="h-full w-full object-cover"
+                  draggable="false"
+                >
+                <figcaption
+                  class="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/90 via-black/50 to-transparent px-3 pb-3 lg:px-4 lg:pb-5 pt-16 text-xs text-white"
+                >
+                  <div>
+                    <p class="text-[10px] sm:text-base  text-uwais-muted">
+                      Sedang Tayang
+                    </p>
+                    <p class="sm:mt-1 mt-0 text-xl sm:text-3xl font-medium text-white">Timur</p>
+                  </div>
+
+                  <div class="flex items-center gap-4 text-uwais-muted text-[10px] sm:text-base md:text-base pb-1">
+                    
+                    <span class="inline-flex items-center gap-2">
+                      <i class="bi bi-calendar3"></i>
+                      <span>18 Desember 2025</span>
+                    </span>
+                  </div>
+                </figcaption>
+
+                <button
+                  type="button"
+                  class="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/90 bg-transparent"
+                  aria-label="Play trailer Timur"
+                  data-video-id="kNyIa50TdEU"
+                >
+                  <span class="sr-only">Play</span>
+                  <span class="flex h-12 w-12 text-[28px] items-center justify-center rounded-full bg-white/10 backdrop-blur text-white">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                </button>
+              </figure>
+            </div>
+          </article>
+
+          {# SLIDE 2 #}
+          <article class="hero-slide flex flex-none w-[70%] md:w-[58%] lg:w-[50%] px-1 md:px-1.5">
+            <div class="mx-auto flex h-full w-full max-w-[740px] flex-col overflow-hidden rounded-xl bg-black/40">
+              <figure class="relative h-full w-full">
+                <img
+                  src="/assets/img/uwais-picture-film.png"
+                  alt="uwais-picture-film"
+                  class="h-full w-full object-cover"
+                  draggable="false"
+                >
+                <figcaption
+                  class="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/90 via-black/50 to-transparent px-3 pb-3 lg:px-4 lg:pb-5 pt-16 text-xs text-white"
+                >
+                  <div>
+                    <p class="text-[10px] sm:text-base text-uwais-muted">
+                      Dalam Produksi
+                    </p>
+                    <p class="sm:mt-1 mt-0 text-xl sm:text-3xl font-medium text-white">Ikatan Darah</p>
+                  </div>
+
+                  <div class="flex items-center gap-4 text-uwais-muted text-[10px] sm:text-base md:text-base pb-1">
+                    
+                    <span class="inline-flex items-center gap-2">
+                      <i class="bi bi-calendar3"></i>
+                      <span>30 April 2026</span>
+                    </span>
+                  </div>
+                </figcaption>
+
+                <button
+                  type="button"
+                  class="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/90 bg-transparent"
+                  aria-label="Play trailer Ikatan Darah"
+                  data-video-id="hLD1NjGiO7Q"
+                >
+                  <span class="sr-only">Play</span>
+                  <span class="flex h-12 w-12 text-[28px] items-center justify-center rounded-full bg-white/10 backdrop-blur text-white">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                </button>
+              </figure>
+            </div>
+          </article>
+
+          {# SLIDE 3 #}
+          <article class="hero-slide flex flex-none w-[70%] md:w-[58%] lg:w-[50%] px-1 md:px-1.5">
+            <div class="mx-auto flex h-full w-full max-w-[740px] flex-col overflow-hidden rounded-xl bg-black/40">
+              <figure class="relative h-full w-full">
+                <img
+                  src="/assets/img/uwais-picture.png"
+                  alt="uwais-picture"
+                  class="h-full w-full object-cover"
+                  draggable="false"
+                >
+                <figcaption
+                  class="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-black/90 via-black/50 to-transparent px-3 pb-3 lg:px-4 lg:pb-5 pt-16 text-xs text-white"
+                >
+                  <div>
+                    <p class="text-[10px] sm:text-base text-uwais-muted ">
+                      Segera Tayang
+                    </p>
+                    <p class="sm:mt-1 mt-0 text-xl sm:text-3xl font-medium text-white">Pasung</p>
+                  </div>
+
+                  <div class="flex items-center gap-4 text-uwais-muted text-[10px] sm:text-base md:text-base pb-1">
+                    
+                    <span class="inline-flex items-center gap-2">
+                      <i class="bi bi-calendar3"></i>
+                      <span> Segera Tayang</span>
+                    </span>
+                  </div>
+                </figcaption>
+
+                <button
+                  type="button"
+                  class="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/90 bg-transparent"
+                  aria-label="Play trailer Timur"
+                  data-video-id="YOUTUBE_ID_TIMUR"
+                >
+                  <span class="sr-only">Play</span>
+                  <span class="flex h-12 w-12 text-[28px] items-center justify-center rounded-full bg-white/10 backdrop-blur text-white">
+                    <i class="bi bi-play-fill"></i>
+                  </span>
+                </button>
+              </figure>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      {# tombol panah #}
+      <div class="pointer-events-none absolute hidden inset-y-0 left-0 right-0 flex items-center justify-between px-[2%] md:px-[6%] lg:px-[8%]">
+        <button
+          type="button"
+          class="pointer-events-auto hidden h-12 w-12 items-center justify-center rounded-full bg-black/60 text-white shadow-card backdrop-blur hover:bg-black md:flex"
+          aria-label="Previous slide"
+          data-hero-prev
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none">
+            <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          class="pointer-events-auto hidden md:flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-white shadow-card backdrop-blur hover:bg-white/16"
+          aria-label="Next slide"
+          data-hero-next
+        >
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {# MODAL VIDEO YOUTUBE #}
+  <div
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 px-4"
+    data-video-modal
+   >
+    <div class="relative w-full max-w-6xl aspect-video bg-black rounded-2xl overflow-hidden">
+      <button
+        type="button"
+        class="absolute -top-10 right-0 text-white hover:text-white/70"
+        aria-label="Close video"
+        data-video-close
+      >
+        <i class="bi bi-x-lg text-2xl"></i>
+      </button>
+
+      <iframe
+        class="h-full w-full"
+        data-video-iframe
+        src=""
+        title="Trailer video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+</section>

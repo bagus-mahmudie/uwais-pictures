@@ -1,0 +1,160 @@
+---
+layout: layouts/base.njk
+title: News
+
+description: Discover the latest Uwais Pictures news with fresh updates inspiring stories new releases and exclusive behind the scenes content.
+keywords: news
+socialImage: /assets/img/og-uwais.jpg
+
+permalink: /en/news/
+lang: en
+translationKey: news
+---
+
+{% set mainNews = [
+  {
+    title: "Ikatan Darah Film Genre 2026: Exploring Action, Thriller, & Crime",
+    excerpt: "Find out the genre of Ikatan Darah Film 2026 before watching! A deep dive into the thriller and crime elements that make this film one of the most anticipated this year.",
+    img: "/assets/img/artikel/artikel-6/genre-film-ikatan-darah-2026.png",
+    alt: "genre-film-ikatan-darah-2026",
+    link: "Ikatan-Darah-Film-Genre-2026/"
+  },
+  {
+    title: "Who is Livi Ciananta? Here’s Her Profile & Role in Ikatan Darah Film",
+    excerpt: "Curious about her? Here is the profile of Livi Ciananta in Ikatan Darah film. Discover her complete biodata and why her performance captivates audiences!",
+    img: "/assets/img/artikel/artikel-5/profil-livi-ciananta-film-ikatan-darah.png",
+    alt: "profil-livi-ciananta-film-ikatan-darah",
+    link: "Livi-Ciananta's-Profile-Ikatan-Darah-Film/"
+  }
+] %}
+
+  <section class="relative overflow-hidden pb-10 pt-20 mt-10 sm:mt-0 md:mt-20">
+    <div class="mx-auto max-w-6xl px-4 lg:px-0">
+
+      {# =========================
+        MAIN NEWS GRID
+        ========================= #}
+      <div class="grid gap-6 lg:grid-cols-2">
+
+        {# LEFT BIG CARD #}
+        <article class="rounded-b-2xl rounded-t-none overflow-hidden bg-uwais-card-soft">
+          <div class="overflow-hidden">
+            <img src="{{ mainNews[0].img }}" alt="{{ mainNews[0].alt }}" class="w-full h-[365px] object-cover" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h1 class="text-[24px] font-medium line-clamp-1 text-white mb-3">
+              {{ mainNews[0].title }}
+            </h1>
+            <p class="text-[16px] text-uwais-muted mb-8 line-clamp-2 leading-relaxed">
+              {{ mainNews[0].excerpt }}
+            </p>
+            <a href="{{ mainNews[0].link }}" class="inline-flex items-center text-uwais-red hover:text-white text-[16px]">
+              Read More <i class="bi bi-arrow-right-short text-[16px]"></i>
+            </a>
+          </div>
+        </article>
+
+        {# RIGHT BIG CARD #}
+        <article class="rounded-b-2xl rounded-t-none overflow-hidden bg-uwais-card-soft">
+          <div class="overflow-hidden">
+            <img src="{{ mainNews[1].img }}" alt="{{ mainNews[1].alt }}" class="w-full h-[365px] object-cover" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h1 class="text-[24px] font-medium line-clamp-1 text-white mb-3">
+              {{ mainNews[1].title }}
+            </h1>
+            <p class="text-[16px] text-uwais-muted mb-8 line-clamp-2 leading-relaxed">
+              {{ mainNews[1].excerpt }}
+            </p>
+            <a href="{{ mainNews[1].link }}" class="inline-flex items-center text-uwais-red hover:text-white text-[16px]">
+              Read More <i class="bi bi-arrow-right-short text-[16px]"></i>
+            </a>
+          </div>
+        </article>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  {# ================= ACTION CINEMA INSIGHTS ================= #}
+  <section class="py-0 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0
+                flex flex-col items-start lg:flex-row lg:items-center lg:justify-between
+                gap-6 lg:gap-4 mb-10">
+      <div class="min-w-0">
+        <h2 class="text-2xl sm:text-3xl lg:text-5xl font-medium">
+          Related articles
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
+          Discover action cinema insights that reveal the techniques, trends, and expertise behind filmmaking.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="max-w-6xl mx-auto px-4 lg:px-0 grid gap-6 md:grid-cols-3">
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-4/daftar-pemeran-film-ikatan-Darah.jpg" alt="daftar-pemeran-film-ikatan-Darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Cast List of Ikatan Darah Film: Featuring Livi Ciananta & Derby Romero!
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Who are the stars behind this brutal action? Check out the complete cast list of Ikatan Darah film, from Livi Ciananta, Derby Romero, to Lydia Kandou. Discover their profiles and characters here!</p>
+          <a href="/en/news/List-of-cast-of-the-film-ikatan-darah/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Read More
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-3/sinopsis-film-ikatan-darah-uwais-pictures.png" alt="sinopsis-film-ikatan-darah-uwais-pictures" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Synopsis of Ikatan Darah Film (Uwais Pictures) Premieres April 30, 2026
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Trapped in online gambling! Check out the synopsis of Ikatan Darah film produced by Uwais Pictures. A heroic brother saves his sibling from death. See the release schedule!</p>
+          <a href="/en/news/synopsis-film-ikatan-darah-uwais-pictures/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Read More
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-2/film-ikatan-darah.png" alt="film-ikatan-darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Press Conference for the Film Ikatan Darah: From an American Festival to the Indonesian Big Screen
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Check out the complete recap of the Ikatan Darah press conference. It explores Tata Sidharta's idealism, Iko Uwais's physical challenges, and the social mission behind this latest action film.</p>
+          <a href="/en/news/press-conference-ikatan-darah-movie/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Read More
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-1/daftar-film-uwais-pictures-2025.png" alt="daftar-film-uwais-pictures-2025" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Uwais Pictures Film Lineup 2025 & Upcoming Projects by Iko Uwais
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Check out the complete list of Uwais Pictures' 2025 films! Discover Iko Uwais's future projects, release dates, and sneak peeks at the latest action films to look forward to.</p>
+          <a href="/en/news/uwais-pictures-movies/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Read More
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>

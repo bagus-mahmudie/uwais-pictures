@@ -1,0 +1,448 @@
+---
+layout: layouts/base.njk
+title: Home
+
+description: Uwais Pictures, a top Indonesian film production house by Iko Uwais, creating high quality and innovative cinematic works.
+keywords: uwais pictures
+socialImage: /assets/img/og-uwais.jpg
+
+permalink: /en/
+lang: en
+translationKey: home
+---
+
+{# HERO + CAROUSEL #}
+{% include "components/hero-carousel-" ~ (lang or "id") ~ ".njk" %}
+
+{# What's Different #}
+<section class="relative py-0 lg:py-14">
+  <div class="mx-auto max-w-6xl px-4 lg:px-0">
+    <header class="mb-8 text-center">
+      <h2 class="text-2xl sm:text-4xl lg:text-5xl font-medium">
+        Whats Different?
+      </h2>
+      <p class="mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-normal text-uwais-muted">
+        Uwais Pictures delivers unmatched action crafted with authentic mastery and global ambition.
+      </p>
+    </header>
+
+    <div class="grid gap-5 md:grid-cols-3">
+      <article class="rounded-2xl bg-uwais-card-soft p-6 shadow-card">
+        <div class="mb-4 inline-flex h-[64px] w-[64px] items-center justify-center rounded-full bg-white/5">
+          <img
+              src="/assets/img/globe.png"
+              alt="Adegan aksi di gedung dengan cahaya biru"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+        </div>
+        <h3 class="mb-4 text-xl font-medium sm:text-2xl text-white">Global Expertise</h3>
+        <p class="text-base leading-snug text-uwais-muted">
+          Uwais Pictures delivers world class action crafted by internationally recognized fighters and filmmakers.
+        </p>
+      </article>
+
+      <article class="rounded-2xl bg-uwais-card-soft p-6 shadow-card">
+        <div class="mb-4 inline-flex h-[64px] w-[64px] items-center justify-center rounded-full bg-white/5">
+          <img
+              src="/assets/img/play.png"
+              alt="Adegan aksi di gedung dengan cahaya biru"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+        </div>
+        <h3 class="mb-4 text-xl font-medium sm:text-2xl text-white">Bold Vision</h3>
+        <p class="text-base leading-snug text-uwais-muted">
+          Uwais Pictures aims to globalize Indonesian action through intense, authentic, and cinematic storytelling.
+        </p>
+      </article>
+
+      <article class="rounded-2xl bg-uwais-card-soft p-6 shadow-card">
+        <div class="mb-4 inline-flex h-[64px] w-[64px] items-center justify-center rounded-full bg-white/5">
+          <img
+              src="/assets/img/camera.png"
+              alt="Adegan aksi di gedung dengan cahaya biru"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+        </div>
+        <h3 class="mb-4 text-xl font-medium sm:text-2xl text-white">Action Heritage</h3>
+        <p class="text-base leading-snug text-uwais-muted">
+          Uwais Pictures emerges from seasoned action team delivering choreography and execution.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+{# ================================
+   PRODUCTION HOUSE INDONESIA
+   ================================ #}
+
+<section class="relative py-16">
+  <div class="mx-auto max-w-6xl px-4 lg:px-0">
+
+    <header class="mb-6 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h2 class="mt-1 text-2xl sm:text-4xl lg:text-5xl font-medium font-medium text-white">Production House Indonesia</h2>
+            <p class="mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-normal text-uwais-muted">
+              Uwais Pictures is the best production house in Indonesia and a trusted top production house Indonesia.
+            </p>
+          </div>
+          <a
+            href="/en/about/"
+            class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-[#E31E26] px-6 py-2 text-base sm:text-lg text-white hover:bg-uwais-red-soft"
+          >
+            See Details <span aria-hidden="true">➜</span>
+          </a>
+    </header>
+
+{# --- DESKTOP GRID (2 rows x 3 cols) --- #}
+<div class="mt-10 hidden gap-6 md:grid md:grid-cols-3 md:grid-rows-2">
+
+  {# Inspiring Projects – row 1, col 1 #}
+  <article class="relative overflow-hidden rounded-b-2xl rounded-t-none md:col-start-1 md:row-start-1 md:h-[350px]">
+    <img
+      src="/assets/img/uwais-picture-production.png"
+      alt="uwais-picture-production"
+      class="h-full w-full object-cover"
+    >
+
+    <div class="absolute inset-x-0 bottom-0">
+      <div class="relative px-6 pb-6 pt-4">
+        {# overlay blur auto-height #}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent backdrop-blur-md"></div>
+
+        <div class="relative">
+          <h3 class="text-lg sm:text-2xl font-medium text-white">Inspiring Projects</h3>
+          <p class="mt-1 text-[16px] text-white/60">
+            Real patriotic stories bring meaning and narrative strength to action.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {# Top Quality – row 1, col 2 #}
+  <article class="relative overflow-hidden rounded-b-2xl rounded-t-none md:col-start-2 md:row-start-1 md:h-[350px]">
+    <img
+      src="/assets/img/uwais-picture-production-house-indonesia.png"
+      alt="uwais-picture-production-house-indonesia"
+      class="h-full w-full object-cover"
+    >
+
+    <div class="absolute inset-x-0 bottom-0">
+      <div class="relative px-6 pb-6 pt-4">
+        {# overlay blur auto-height #}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent backdrop-blur-md"></div>
+
+        <div class="relative">
+          <h3 class="text-lg sm:text-2xl font-medium text-white">Top Quality</h3>
+          <p class="mt-1 text-[16px] text-white/60">
+            Exceptional detail ensures polished, high-standard cinematic output.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {# Action Revolution – col 3, span 2 rows (tall card) #}
+  <article class="relative overflow-hidden rounded-b-2xl rounded-t-none md:col-start-3 md:row-start-1 md:row-span-2 md:h-[726px]">
+    <img
+      src="/assets/img/production-house-jakarta.png"
+      alt="production-house-jakarta"
+      class="h-full w-full object-cover"
+    >
+
+    <button
+      type="button"
+      class="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur transition hover:bg-white/25"
+      aria-label="See more"
+    >
+      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M9 6l6 6-6 6"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <div class="absolute inset-x-0 bottom-0">
+      <div class="relative px-6 pb-6 pt-4">
+        {# overlay blur auto-height #}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent backdrop-blur-md"></div>
+
+        <div class="relative">
+          <h3 class="text-lg sm:text-2xl font-medium text-white">Action Revolution</h3>
+          <p class="mt-1 text-[16px] text-white/60">
+            A fresh vision delivering educated, safe, calculated, and elevated action.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {# Seasoned Team – row 2, col 1–2 (wide) #}
+  <article class="relative overflow-hidden rounded-b-2xl rounded-t-none md:col-start-1 md:col-span-2 md:row-start-2 md:h-[350px]">
+    <img
+      src="/assets/img/production-house-indonesia.png"
+      alt="production-house-indonesia"
+      class="h-full w-full object-cover"
+    >
+
+    <div class="absolute inset-x-0 bottom-0">
+      <div class="relative px-6 pb-6 pt-4">
+        {# overlay blur auto-height #}
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent backdrop-blur-md"></div>
+
+        <div class="relative">
+          <h3 class="text-lg sm:text-2xl font-medium text-white">Seasoned Team</h3>
+          <p class="mt-1 text-[16px] text-white/60">
+            A well-bonded action team creates authentic, technically precise cinematic sequences,
+            enhancing deeper audience immersion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+{# --- MOBILE (stacked) --- #}
+<div class="mt-8 space-y-6 md:hidden">
+  {% for card in [
+    {
+      img: "uwais-picture-production.png",
+      title: "Inspiring Projects",
+      text: "Real patriotic stories bring meaning and narrative strength to action."
+    },
+    {
+      img: "uwais-picture-production-house-indonesia.png",
+      title: "Top Quality",
+      text: "Exceptional detail ensures polished, high-standard cinematic output."
+    },
+    {
+      img: "production-house-indonesia.png",
+      title: "Seasoned Team",
+      text: "A well-bonded action team creates authentic, technically precise cinematic sequences, enhancing deeper audience immersion."
+    },
+    {
+      img: "production-house-jakarta.png",
+      title: "Action Revolution",
+      text: "A fresh vision delivering educated, safe, calculated, and elevated action."
+    }
+  ] %}
+    <article class="relative overflow-hidden rounded-b-2xl rounded-t-none">
+      <img
+        src="/assets/img/{{ card.img }}"
+        alt="{{ card.title }}"
+        class="h-72 w-full object-cover"
+      >
+
+      <div class="absolute inset-x-0 bottom-0">
+        <div class="relative px-6 pb-6 pt-4">
+          {# overlay blur auto-height (no fixed height) #}
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent backdrop-blur-md"></div>
+
+          <div class="relative">
+            <h3 class="text-lg font-semibold text-white">{{ card.title }}</h3>
+            <p class="mt-1 text-sm text-white/85">
+              {{ card.text }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+
+  </div>
+</section>
+
+{# ================================
+   BEST ACTION MOVIE
+   ================================ #}
+
+<section class="relative py-0 lg:py-16">
+
+    {# KOTAK KIRI & KANAN – PATTERN SEPERTI DESAIN #}
+    <div class="pointer-events-none absolute inset-0 hidden md:block">
+        <div class="mx-auto h-full max-w-6xl overflow-hidden relative px-4 lg:px-0">
+
+        {# CLUSTER KIRI: 1 atas, 2 bawah #}
+        <div class="absolute right-0 top-[120px] -translate-y-1/2 translate-x-10 h-56 w-64">
+            {# atas (tengah) #}
+            <span
+            class="absolute left-1/2 top-0 h-[84px] w-[84px] -translate-x-1/2 rounded-[18px] bg-white/5"
+            ></span>
+
+            {# bawah kiri #}
+            <span
+            class="absolute right-0 top-20 h-[84px] w-[84px] rounded-[18px] bg-white/5"
+            ></span>
+
+            {# bawah kanan #}
+            <span
+            class="absolute left-0 top-20 h-[84px] w-[84px] rounded-[18px] bg-white/5"
+            ></span>
+        </div>
+
+        </div>
+    </div>
+
+  <div class="mx-auto max-w-6xl px-4 lg:px-0">
+    <header class="mb-10 text-center">
+      <h2 class="text-2xl sm:text-4xl lg:text-5xl font-medium">Best Action Movie</h2>
+      <p class="mx-auto mt-4 max-w-2xl text-base sm:text-lg leading-normal text-uwais-muted">
+        Cinematic quality of Uwais Pictures action films.
+        Find the best collection of images here.
+      </p>
+    </header>
+
+    <div class="space-y-4">
+
+      {# ROW 1 — geser ke kiri #}
+      <div class="relative overflow-hidden">
+        <div class="flex gap-4 will-change-transform" data-marquee-track="left">
+
+          {# set 1 #}
+          {% for img in ["uwais-picture-production-house.png","top-production-house-indonesia.png","uwais-picture-top-production-house.png","production-company-indonesia.png","production-house-film-indonesia.png"] %}
+          <figure class="h-[260px] w-[260px] shrink-0 overflow-hidden rounded-[18px]">
+            <img
+              src="/assets/img/best/{{ img }}"
+              alt="Best action image {{ loop.index }}"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </figure>
+          {% endfor %}
+
+          {# set 2 (duplikat) #}
+          {% for img in ["uwais-picture-production-house.png","top-production-house-indonesia.png","uwais-picture-top-production-house.png","production-company-indonesia.png","production-house-film-indonesia.png"] %}
+          <figure class="h-[260px] w-[260px] shrink-0 overflow-hidden rounded-[18px]">
+            <img
+              src="/assets/img/best/{{ img }}"
+              alt="Best action image duplicate {{ loop.index }}"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </figure>
+          {% endfor %}
+
+        </div>
+      </div>
+
+      {# ROW 2 — geser ke kanan #}
+      <div class="relative overflow-hidden">
+        <div class="flex gap-4 will-change-transform" data-marquee-track="right">
+
+          {# set 1 #}
+          {% for img in ["indonesia-production-house.png","indonesia-production-house-jakarta.png","production-house-indoensia-uwais-picture.png","uwais-picture-indonesia-production-house.png","production-house-uwais-picture.png"] %}
+          <figure class="h-[260px] w-[260px] shrink-0 overflow-hidden rounded-[18px]">
+            <img
+              src="/assets/img/best/{{ img }}"
+              alt="Best action image {{ loop.index }}"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </figure>
+          {% endfor %}
+
+          {# set 2 (duplikat) #}
+          {% for img in ["indonesia-production-house.png","indonesia-production-house-jakarta.png","production-house-indoensia-uwais-picture.png","uwais-picture-indonesia-production-house.png","production-house-uwais-picture.png"] %}
+          <figure class="h-[260px] w-[260px] shrink-0 overflow-hidden rounded-[18px]">
+            <img
+              src="/assets/img/best/{{ img }}"
+              alt="Best action image duplicate {{ loop.index }}"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </figure>
+          {% endfor %}
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  {# ================= ACTION CINEMA INSIGHTS ================= #}
+  <section class=" py-16  text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0
+                flex flex-col items-start lg:flex-row lg:items-center lg:justify-between
+                gap-6 lg:gap-4 mb-10">
+      <div class="min-w-0">
+        <h2 class="text-2xl sm:text-3xl lg:text-5xl font-medium">
+          Action Cinema Insight
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
+          Discover action cinema insights revealing techniques, trends, and mastery behind filmmaking.
+        </p>
+      </div>
+
+      <a
+        href="/en/news/"
+        class="inline-flex items-center gap-2 rounded-full bg-[#E31E26]
+              px-6 py-3 text-sm sm:text-base text-white
+              border border-white/15 hover:bg-uwais-red-soft"
+      >
+        See More <span aria-hidden="true">➜</span>
+      </a>
+    </div>
+
+
+    <div class="max-w-6xl mx-auto px-4 lg:px-0 grid gap-6 md:grid-cols-3">
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-6/genre-film-ikatan-darah-2026.png" alt="genre-film-ikatan-darah-2026" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+           Ikatan Darah Film Genre 2026: Exploring Action, Thriller, & Crime
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Find out the genre of Ikatan Darah Film 2026 before watching! A deep dive into the thriller and crime elements that make this film one of the most anticipated this year.</p>
+          <a href="/en/news/Ikatan-Darah-Film-Genre-2026/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Read More
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-5/profil-livi-ciananta-film-ikatan-darah.png" alt="profil-livi-ciananta-film-ikatan-darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Who is Livi Ciananta? Here’s Her Profile & Role in Ikatan Darah Film
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+           Curious about her? Here is the profile of Livi Ciananta in Ikatan Darah film. Discover her complete biodata and why her performance captivates audiences!</p>
+          <a href="/en/news/Livi-Ciananta's-Profile-Ikatan-Darah-Film/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Read More
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-4/daftar-pemeran-film-ikatan-Darah.jpg" alt="daftar-pemeran-film-ikatan-Darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Cast List of Ikatan Darah Film: Featuring Livi Ciananta & Derby Romero!
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Who are the stars behind this brutal action? Check out the complete cast list of Ikatan Darah film, from Livi Ciananta, Derby Romero, to Lydia Kandou. Discover their profiles and characters here!</p>
+          <a href="/en/news/List-of-cast-of-the-film-ikatan-darah/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Read More
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+

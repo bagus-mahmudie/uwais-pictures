@@ -1,0 +1,44 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+{% for pair in collections.translated %}
+
+  {% if pair.idPage %}
+  <url>
+    <loc>https://uwaispictures.id{{ pair.idPage.url }}</loc>
+    <lastmod>{{ pair.idPage.date | sitemapDate }}</lastmod>
+
+    <xhtml:link rel="alternate" hreflang="id"
+      href="https://uwaispictures.id{{ pair.idPage.url }}" />
+
+    {% if pair.enPage %}
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://uwaispictures.id{{ pair.enPage.url }}" />
+    {% endif %}
+  </url>
+  {% endif %}
+
+  {% if pair.enPage %}
+  <url>
+    <loc>https://uwaispictures.id{{ pair.enPage.url }}</loc>
+    <lastmod>{{ pair.enPage.date | sitemapDate }}</lastmod>
+
+    {% if pair.idPage %}
+    <xhtml:link rel="alternate" hreflang="id"
+      href="https://uwaispictures.id{{ pair.idPage.url }}" />
+    {% endif %}
+
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://uwaispictures.id{{ pair.enPage.url }}" />
+  </url>
+  {% endif %}
+
+{% endfor %}
+
+</urlset>

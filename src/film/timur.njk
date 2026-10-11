@@ -1,0 +1,779 @@
+---
+title: "Timur"
+layout: "layouts/base.njk"
+
+description: Film Timur, yang akan dirilis pada 18 Desember 2025, mengisahkan seorang tentara Kopassus yang menjalankan misi penyelamatan sandera di hutan bagian timur, hanya untuk menemukan bahwa saudara kandungnya sendiri adalah bagian dari kelompok teroris.
+keywords: film timur
+socialImage: /assets/img/og-uwais.jpg
+
+lang: id
+translationKey: timur
+---
+
+<main>
+
+  {# ================= HERO DETAIL TIMUR ================= #}
+  <section class="relative overflow-hidden pb-16 pt-16 sm:pt-10 mt-10 sm:mt-0 md:mt-20 lg:pb-12">
+    <div class="max-w-6xl mx-auto px-4 lg:px-0 relative">
+
+      <div class="relative overflow-hidden rounded-2xl">
+        <!-- Background Image -->
+        <img
+          src="/assets/img/timur/film-timur.png"
+          alt="film-timur"
+          class="w-full h-[560px] sm:h-[640px] lg:h-[720px] object-cover object-top"
+        >
+
+        <!-- 🔥 OVERLAY GRADIENT ATAS & BAWAH -->
+        <div class="absolute inset-0 pointer-events-none">
+          <!-- Gradient Atas -->
+          <div
+            class="absolute top-0 left-0 w-full h-[320px] sm:h-[420px] lg:h-[500px]
+                  bg-gradient-to-b from-[#050507] via-[#050507]/80 to-transparent"
+          ></div>
+
+          <!-- Gradient Bawah -->
+          <div
+            class="absolute bottom-0 left-0 w-full h-56 sm:h-64
+                  bg-gradient-to-t from-[#050507] via-[#050507]/80 to-transparent"
+          ></div>
+
+          <!-- GRADIENT KIRI -->
+          <div
+            class="absolute left-0 top-0 h-full w-24 sm:w-32 lg:w-40
+                  bg-gradient-to-r from-[#050507] via-[#050507]/50 to-transparent"
+          ></div>
+
+          <!-- GRADIENT KANAN -->
+          <div
+            class="absolute right-0 top-0 h-full w-24 sm:w-32 lg:w-40
+                  bg-gradient-to-l from-[#050507] via-[#050507]/50 to-transparent"
+          ></div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="absolute inset-0 flex flex-col items-center text-center px-4 sm:px-6 pt-14 sm:pt-20">
+          <img
+            src="/assets/img/timur/film-timur-iko-uwais.png"
+            alt="film-timur-iko-uwais"
+            class="w-full max-w-[220px] sm:max-w-[260px] lg:max-w-[300px] drop-shadow-lg mb-4 sm:mb-6"
+          >
+
+          <p class="max-w-[42ch] sm:max-w-2xl text-uwais-muted text-sm sm:text-base leading-relaxed">
+            Flim TIMUR, seorang prajurit KOPASSUS, ditugaskan untuk melaksanakan operasi penyelamatan sandera melawan kelompok teroris di hutan timur. Tanpa diduga, ia menemukan bahwa saudara susunya, APOLO, ternyata merupakan anggota kelompok teroris tersebut.
+          </br>
+          </br>
+          Aksi, Drama, Perang, Thriller, Sejarah 
+          &nbsp; | &nbsp; 
+          101 menit 
+          &nbsp; | &nbsp; 
+          18 Desember 2026
+          </p>
+
+          <!-- PLAY BUTTON (posisi stabil di mobile) -->
+          <button
+            type="button"
+            class="absolute left-1/2 bottom-20 sm:bottom-24 flex h-16 w-16 sm:h-20 sm:w-20
+                  -translate-x-1/2 -translate-y-3/4 items-center justify-center rounded-full border border-white/90 bg-transparent"
+            aria-label="Play trailer Timur"
+            data-video-id="kNyIa50TdEU"
+          >
+            <span class="sr-only">Play</span>
+            <span class="flex h-12 w-12 sm:h-16 sm:w-16 text-2xl sm:text-[32px] items-center justify-center rounded-full bg-white/10 backdrop-blur text-white">
+              <i class="bi bi-play-fill"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      
+      {# MODAL VIDEO YOUTUBE #}
+      <div
+        class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 px-4"
+        data-video-modal
+       >
+        <div class="relative w-full max-w-6xl aspect-video bg-black rounded-2xl overflow-hidden">
+          <button
+            type="button"
+            class="absolute -top-10 right-0 text-white hover:text-white/70"
+            aria-label="Close video"
+            data-video-close
+          >
+            <i class="bi bi-x-lg text-2xl"></i>
+          </button>
+
+          <iframe
+            class="h-full w-full"
+            data-video-iframe
+            src=""
+            title="Trailer video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+  
+      <!-- CREW BAR -->
+      <div class="w-full mt-6">
+        <div class="max-w-6xl mx-auto">
+
+          <!-- Wrapper besar -->
+          <div class="rounded-2xl p-3 sm:p-4 overflow-hidden bg-white/5 backdrop-blur-sm">
+
+            <!-- ============ MOBILE (stack seperti gambar) ============ -->
+            <div class="md:hidden space-y-3">
+              <!-- Director -->
+              <div class="rounded-2xl bg-white/5 overflow-hidden">
+                <div class="px-4 py-3 bg-white/10 text-white text-sm font-medium">
+                  Direktur
+                </div>
+                <div class="px-4 py-3 text-gray-200 text-sm">
+                  Iko Uwais
+                </div>
+              </div>
+
+              <!-- Executive Producer -->
+              <div class="rounded-2xl bg-white/5 overflow-hidden">
+                <div class="px-4 py-3 bg-white/10 text-white text-sm font-medium">
+                  Eksekutif Produser
+                </div>
+                <div class="px-4 py-3 text-gray-200 text-sm leading-relaxed">
+                  Nagita Slavina, Yentonius Jerrel Ho
+                </div>
+              </div>
+
+              <!-- Producer -->
+              <div class="rounded-2xl bg-white/5 overflow-hidden">
+                <div class="px-4 py-3 bg-white/10 text-white text-sm font-medium">
+                  Produser
+                </div>
+                <div class="px-4 py-3 text-gray-200 text-sm">
+                  Ryan Santoso
+                </div>
+              </div>
+
+              <!-- Fight Choreographer -->
+              <div class="rounded-2xl bg-white/5 overflow-hidden">
+                <div class="px-4 py-3 bg-white/10 text-white text-sm font-medium">
+                  Koreografer
+                </div>
+                <div class="px-4 py-3 text-gray-200 text-sm">
+                  Uwais Team
+                </div>
+              </div>
+            </div>
+
+            <!-- ============ TABLET / DESKTOP (tabel seperti semula) ============ -->
+            <div class="hidden md:block">
+              <!-- Bar Jabatan (atas) -->
+              <div class="grid grid-cols-[1fr_2fr_1.1fr_1fr] rounded-t-xl rounded-b-none bg-white/10 px-6 py-4">
+                <p class="text-sm lg:text-[16px] text-white">Direktur</p>
+                <p class="text-sm lg:text-[16px] text-white">Eksekutif Produser</p>
+                <p class="text-sm lg:text-[16px] text-white">Produser</p>
+                <p class="text-sm lg:text-[16px] text-white">Koreografer</p>
+              </div>
+
+              <!-- Bar Nama (bawah) -->
+              <div class="grid grid-cols-[1fr_2fr_1.1fr_1fr] px-6 py-4">
+                <p class="text-sm lg:text-[16px] text-gray-200">Iko Uwais</p>
+                <p class="text-sm lg:text-[16px] text-gray-200">Nagita Slavina, Yentonius Jerrel Ho</p>
+                <p class="text-sm lg:text-[16px] text-gray-200">Ryan Santoso</p>
+                <p class="text-sm lg:text-[16px] text-gray-200">Uwais Team</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TOP RIGHT ACTIONS (Rating + Share) -->
+      <div class="absolute right-6 top-6 z-20 flex items-center gap-4">
+        <button
+          type="button"
+          class="inline-flex items-center gap-2 text-white/90 hover:text-white"
+          aria-label="Share"
+          data-share-open
+        >
+          <i class="bi bi-upload text-[14px] md:text-[18px]"></i>
+          <span class="text-[14px] md:text-[18px] font-medium">Bagikan</span>
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  {# ================= OFFICIAL CAST ================= #}
+  <section class="pt-0 lg:pt-10 py-16 lg:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
+
+      {# TOP TEXT AREA #}
+      <div class="grid gap-4 lg:gap-8 lg:grid-cols-[minmax(0,.9fr)_minmax(0,1fr)] items-start mb-10 md:mb-12">
+        <div>
+          <h1 class="text-2xl sm:text-3xl lg:text-5xl font-medium leading-tight text-white">
+            Pemeran Resmi 
+            <span class="lg:block">Film Timur</span>
+          </h1>
+        </div>
+
+        <div>
+          <p class="text-sm sm:text-base text-uwais-muted leading-relaxed">
+            Iko Uwais, Aufa Dien Assagaf, Jimmy Kobogau, Yusuf Mahardika, Macho Virgonta Hungan,
+            Fanny Ghassani, Andri Mashadi, Stefan Willian, Yasamin jasem, Arnold Eughenius Spyridon Kobogau,
+            Amara Angel, Bizaeltansale, Adhin Abdul Hakim, Beyon Destiano
+          </p>
+        </div>
+      </div>
+
+      {# MOBILE: CAROUSEL | DESKTOP: GRID 3x2 #}
+      <div
+        class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 pr-2
+              md:grid md:grid-cols-3 md:grid-rows-2 md:gap-4 md:overflow-visible md:snap-none md:pb-0 md:pr-0
+              [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+
+        {# ITEM 1 (KIRI ATAS di desktop) #}
+        <div class="shrink-0 snap-start w-[85%] sm:w-[70%] md:w-auto md:row-start-1 md:col-start-1">
+          <img
+            src="/assets/img/timur/film-timur-indonesia.png"
+            class="w-full h-[320px] sm:h-[420px] md:h-full object-cover rounded-xl"
+            alt="film-timur-indonesia"
+          >
+        </div>
+
+        {# ITEM 2 (TENGAH, span 2 baris di desktop) #}
+        <div class="shrink-0 snap-start w-[85%] sm:w-[70%] md:w-auto md:row-span-2 md:row-start-1 md:col-start-2">
+          <img
+            src="/assets/img/timur/nonton-film-timur.png"
+            class="w-full h-[320px] sm:h-[420px] md:h-full object-cover rounded-xl"
+            alt="nonton-film-timur"
+          >
+        </div>
+
+        {# ITEM 3 (KANAN ATAS di desktop) #}
+        <div class="shrink-0 snap-start w-[85%] sm:w-[70%] md:w-auto md:row-start-1 md:col-start-3">
+          <img
+            src="/assets/img/timur/film-timur-prabowo.png"
+            class="w-full h-[320px] sm:h-[420px] md:h-full object-cover rounded-xl"
+            alt="film-timur-prabowo"
+          >
+        </div>
+
+        {# ITEM 4 (KIRI BAWAH di desktop) #}
+        <div class="shrink-0 snap-start w-[85%] sm:w-[70%] md:w-auto md:row-start-2 md:col-start-1">
+          <img
+            src="/assets/img/timur/film-timur-2025.png"
+            class="w-full h-[320px] sm:h-[420px] md:h-full object-cover rounded-xl"
+            alt="film-timur-2025"
+          >
+        </div>
+
+        {# ITEM 5 (KANAN BAWAH di desktop) #}
+        <div class="shrink-0 snap-start w-[85%] sm:w-[70%] md:w-auto md:row-start-2 md:col-start-3">
+          <img
+            src="/assets/img/timur/Cast-Film-timur-Iko-Uwais.png"
+            class="w-full h-[320px] sm:h-[420px] md:h-full object-cover rounded-xl"
+            alt="Cast-Film-timur-Iko-Uwais"
+          >
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  {# ================= USER REVIEWS ================= #}
+  <section class="pt-0 pb-0 sm:pt-0  text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
+
+      <div class="overflow-hidden">
+        <h2 class="text-2xl sm:text-3xl lg:text-5xl sm:mb-20 font-medium">Ulasan Pengguna</h2>
+
+        {# Data tinggi bar pakai persen (0 - 100) #}
+        {% set ratingDist = [
+          { score: 1,  percent: 9 },
+          { score: 2,  percent: 8 },
+          { score: 3,  percent: 7 },
+          { score: 4,  percent: 19 },
+          { score: 5,  percent: 14 },
+          { score: 6,  percent: 16 },
+          { score: 7,  percent: 9 },
+          { score: 8,  percent: 10 },
+          { score: 9,  percent: 2 },
+          { score: 10, percent: 6 }
+        ] %}
+
+        {# Max percent otomatis dari data tertinggi #}
+        {% set maxPercent = 0 %}
+        {% for item in ratingDist %}
+          {% if item.percent > maxPercent %}
+            {% set maxPercent = item.percent %}
+          {% endif %}
+        {% endfor %}
+
+        {# TOP: rating + distribution #}
+        <div class="mt-10 grid gap-8 lg:grid-cols-[360px,1fr] items-center">
+
+          {# LEFT: score #}
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-[#FACC15] text-3xl sm:text-4xl leading-none">★</span>
+              <p class="text-4xl sm:text-5xl font-semibold leading-none">2.9</p>
+              <span class="text-uwais-muted text-base leading-none pb-1">/ 10</span>
+            </div>
+
+            {# AVATAR: reviews text moved under avatars #}
+            <div class="inline-flex flex-col gap-3">
+              <div class="flex -space-x-4">
+                <img src="/assets/img/review/adrian.jpg" alt="review-timur" class="h-10 w-10 rounded-full border-2 border-[#111111] object-cover" loading="lazy">
+                <img src="/assets/img/review/agustina.jpg" alt="review-timur-2025" class="h-10 w-10 rounded-full border-2 border-[#111111] object-cover" loading="lazy">
+                <img src="/assets/img/review/iqbal.jpg" alt="review-film-timur" class="h-10 w-10 rounded-full border-2 border-[#111111] object-cover" loading="lazy">
+                {# avatar + #}
+                <div class="h-10 w-10 rounded-full border-2 border-[#111111] bg-[#121214] flex items-center justify-center
+                            text-2xl font-normal text-uwais-muted">+
+                </div>
+              </div>
+              <p class="text-uwais-muted text-sm sm:text-base">758.8K Ulasan</p>
+            </div>
+          </div>
+
+          {# RIGHT: bars #}
+          <div class="w-full" data-review-chart>
+            <div class="flex items-end justify-between gap-2 sm:gap-3">
+              {% for item in ratingDist %}
+                <div class="flex flex-col items-center gap-2 w-full group">
+                  <div class="relative w-full mx-auto h-24 sm:h-36 flex items-end">
+                    <div
+                      class="review-bar-wrap relative w-full"
+                      style="height: {{ (item.percent / maxPercent) * 100 }}%;"
+                    >
+                      <div
+                        class="review-tooltip pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded-full bg-[#E31E26] px-2 py-1 text-[11px] sm:text-xs font-medium text-white opacity-0 translate-y-1 transition-all duration-200 whitespace-nowrap"
+                      >
+                        {{ item.percent }}%
+                      </div>
+
+                      <button
+                        type="button"
+                        class="review-bar absolute inset-x-0 bottom-0 w-full rounded-lg bg-white/10 transition-all duration-300 hover:bg-[#E31E26] hover:shadow-[0_12px_30px_rgba(227,30,38,0.25)] focus:bg-[#E31E26] focus:shadow-[0_12px_30px_rgba(227,30,38,0.25)] outline-none"
+                        style="height: 100%;"
+                        data-review-bar
+                        data-percent="{{ item.percent }}"
+                        data-score="{{ item.score }}"
+                        aria-label="Rating {{ item.score }} with {{ item.percent }} percent"
+                      ></button>
+                    </div>
+                  </div>
+
+                  <span class="review-score text-sm sm:text-base text-uwais-muted transition-colors duration-200">
+                    {{ item.score }}
+                  </span>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+        </div>
+
+        {# BOTTOM: review cards #}
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+
+          {# CARD 1 #}
+          <article class="rounded-2xl bg-white/5 border border-white/5 p-4 sm:p-5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3 min-w-0">
+                <img src="/assets/img/review/adrian.jpg" alt="adrian" class="h-12 w-12 rounded-full object-cover" loading="lazy">
+
+                {# name + rating moved under name #}
+                <div class="min-w-0">
+                  <p class="font-medium text-base truncate">adrian_adrian</p>
+                  <div class="mt-1 flex items-center gap-2">
+                    <span class="text-[#FACC15] text-base leading-none">★</span>
+                    <span class="text-sm text-white/90">5/10</span>
+                  </div>
+                </div>
+              </div>
+
+              {# date stays right #}
+              <span class="text-sm hidden lg:block text-uwais-muted shrink-0">5 Des 2025</span>
+            </div>
+
+            <p class="mt-5 text-base text-uwais-muted leading-relaxed">
+              Well... untuk ukuran debut penyutradaraan Iko Uwais terbilang bagus dan mumpuni. Dengan angle scene yang terlihat baguss dan tertata rapih menjadikan film ini tergolong film action yang berkelas.
+            </p>
+          </article>
+
+          {# CARD 2 #}
+          <article class="rounded-2xl bg-white/5 border border-white/5 p-4 sm:p-5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3 min-w-0">
+                <img src="/assets/img/review/agustina.jpg" alt="agustina" class="h-12 w-12 rounded-full object-cover" loading="lazy">
+
+                <div class="min-w-0">
+                  <p class="font-medium text-base truncate">Agustina</p>
+                  <div class="mt-1 flex items-center gap-2">
+                    <span class="text-[#FACC15] text-base leading-none">★</span>
+                    <span class="text-sm text-white/90">8/10</span>
+                  </div>
+                </div>
+              </div>
+
+              <span class="text-sm hidden lg:block text-uwais-muted shrink-0">22 Des 2025</span>
+            </div>
+
+            <p class="mt-5 text-base text-uwais-muted leading-relaxed">
+              Untuk seri laga indonesia, ini bagus.. for me its so nice cuz the action is another haha meskipun masih keliatan agak cgi.... tapi overall us good, of its iko uwais👍❤️
+            </p>
+          </article>
+
+          {# CARD 3 #}
+          <article class="rounded-2xl bg-white/5 border border-white/5 p-4 sm:p-5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3 min-w-0">
+                <img src="/assets/img/review/iqbal.jpg" alt="iqbalcfp" class="h-12 w-12 rounded-full object-cover" loading="lazy">
+
+                <div class="min-w-0">
+                  <p class="font-medium text-base truncate">iqbalcfp</p>
+                  <div class="mt-1 flex items-center gap-2">
+                    <span class="text-[#FACC15] text-base leading-none">★</span>
+                    <span class="text-sm text-white/90">5/10</span>
+                  </div>
+                </div>
+              </div>
+
+              <span class="text-sm hidden lg:block text-uwais-muted shrink-0">21 Des 2025</span>
+            </div>
+
+            <p class="mt-5 text-base text-uwais-muted leading-relaxed">
+              Debut Iko Uwais sbg Sutradara berhasil sih keren 🙌 👏👏 film action sedari awal dar der dor juga menggelegar terutama di bagian desingan peluru wuih mantap bangett 🤩🤩
+            </p>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {# ================= OTHER FILMS ================= #}
+  <section class="pt-16 sm:pt-16 pb-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-0">
+
+    <div class="max-w-6xl mx-auto lg:px-0 
+            flex flex-col items-start lg:flex-row lg:items-center lg:justify-between 
+            gap-6 lg:gap-4 mb-10">
+      <div class="min-w-0">
+        <h2 class="text-2xl sm:text-3xl lg:text-5xl font-medium">Film Lainnya</h2>
+        <p class="mt-2 text-sm sm:text-base text-gray-300 max-w-xl">
+          Jelajahi pilihan film lainnya yang menghadirkan cerita segar dan pengalaman unik untuk Anda nikmati.
+        </p>
+      </div>
+
+      <a
+        href="/film/"
+        class="inline-flex items-center gap-2 rounded-full bg-[#E31E26]
+              px-6 py-3 text-sm sm:text-base text-white
+              border border-white/15 hover:bg-uwais-red-soft"
+      >
+        Lihat Selengkapnya <span aria-hidden="true">➜</span>
+      </a>
+    </div>
+
+
+    {# MOVIE GRID #}
+    <div class="grid gap-6 md:grid-cols-3">
+
+      {# Card 1 – TIMUR #}
+      <a href="/film/timur/" class="group block">
+        <article class="flex flex-col overflow-hidden rounded-b-2xl rounded-t-none bg-uwais-card-soft shadow-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+          <div class="aspect-full overflow-hidden">
+            <img
+              src="/assets/img/film/poster-film-timur.png"
+              alt="poster-film-timur"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+          <div class="px-4 pt-4 pb-5">
+            <h3 class="text-2xl text-white">
+              Timur
+            </h3>
+
+            {# ROW META — MOBILE & DESKTOP #}
+            <div class="mt-4 flex items-center justify-between text-base text-uwais-muted">
+              <span>101 menit</span>
+
+              {# TANGGAL — MUNCUL DI MOBILE (<sm) dan DESKTOP (lg+) #}
+              <span class="inline-flex items-center gap-2 sm:hidden lg:inline-flex">
+                <i class="bi bi-calendar3 text-base "></i>
+                <span>18 Desember 2025</span>
+              </span>
+            </div>
+
+            {# TANGGAL — KHUSUS TABLET (sm & md) #}
+            <span class="mt-2 hidden sm:inline-flex lg:hidden items-center gap-2 text-sm text-uwais-muted">
+              <i class="bi bi-calendar3 text-sm"></i>
+              <span>18 Desember 2025</span>
+            </span>
+          </div>
+        </article>
+      </a>
+
+      {# Card 2 – IKATAN DARAH #}
+      <a href="/film/ikatan-darah/" class="group block">
+        <article class="flex flex-col overflow-hidden rounded-b-2xl rounded-t-none bg-uwais-card-soft shadow-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+          <div class="aspect-full overflow-hidden">
+            <img
+              src="/assets/img/film/poster-film-ikatan-darah.png"
+              alt="poster-film-ikatan-darah"
+              class="h-full w-full object-cover"
+              loading="lazy"
+            >
+          </div>
+          <div class="px-4 pt-4 pb-5">
+            <h3 class="text-2xl text-white">
+              Ikatan Darah
+            </h3>
+
+            {# ROW META — MOBILE & DESKTOP #}
+            <div class="mt-4 flex items-center justify-between text-base text-uwais-muted">
+              <span>119 menit</span>
+
+              {# TANGGAL — MUNCUL DI MOBILE (<sm) dan DESKTOP (lg+) #}
+              <span class="inline-flex items-center gap-2 sm:hidden lg:inline-flex">
+                <i class="bi bi-calendar3 text-base "></i>
+                <span>30 April 2026</span>
+              </span>
+            </div>
+
+            {# TANGGAL — KHUSUS TABLET (sm & md) #}
+            <span class="mt-2 hidden sm:inline-flex lg:hidden items-center gap-2 text-sm text-uwais-muted">
+              <i class="bi bi-calendar3 text-sm"></i>
+              <span>Segera Tayang</span>
+            </span>
+          </div>
+          </article>
+        </a>
+
+        {# Card 3 – PASUNG #}
+        <a href="/film/pasung/" class="group block">
+          <article class="flex flex-col overflow-hidden rounded-b-2xl rounded-t-none bg-uwais-card-soft shadow-card transition-transform duration-200 group-hover:-translate-y-1 group-hover:shadow-2xl">
+            <div class="aspect-full overflow-hidden">
+              <img
+              src="/assets/img/film/poster-film-pasung.png"
+              alt="poster-film-pasung"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              >
+            </div>
+          <div class="px-4 pt-4 pb-5">
+            <h3 class="text-2xl text-white">
+              Pasung
+            </h3>
+
+            {# ROW META — MOBILE & DESKTOP #}
+            <div class="mt-4 flex items-center justify-between text-base text-uwais-muted">
+              <span>120 menit</span>
+
+              {# TANGGAL — MUNCUL DI MOBILE (<sm) dan DESKTOP (lg+) #}
+              <span class="inline-flex items-center gap-2 sm:hidden lg:inline-flex">
+                <i class="bi bi-calendar3 text-base "></i>
+                <span>Segera Tayang</span>
+              </span>
+            </div>
+
+            {# TANGGAL — KHUSUS TABLET (sm & md) #}
+            <span class="mt-2 hidden sm:inline-flex lg:hidden items-center gap-2 text-sm text-uwais-muted">
+              <i class="bi bi-calendar3 text-sm"></i>
+              <span>Segera Tayang</span>
+            </span>
+          </div>
+          </article>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  {# ================= ACTION CINEMA INSIGHTS ================= #}
+  <section class=" pb-16 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0
+                flex flex-col items-start lg:flex-row lg:items-center lg:justify-between
+                gap-6 lg:gap-4 mb-10">
+      <div class="min-w-0">
+        <h2 class="text-2xl sm:text-3xl lg:text-5xl font-medium">
+          Wawasan Sinema Aksi
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
+          Temukan wawasan sinema aksi yang mengungkap teknik, tren, dan keahlian di balik pembuatan film.
+        </p>
+      </div>
+
+      <a
+        href="/berita/"
+        class="inline-flex items-center gap-2 rounded-full bg-[#E31E26]
+              px-6 py-3 text-sm sm:text-base text-white
+              border border-white/15 hover:bg-uwais-red-soft"
+      >
+        Lihat Selengkapnya <span aria-hidden="true">➜</span>
+      </a>
+    </div>
+
+
+    <div class="max-w-6xl mx-auto px-4 lg:px-0 grid gap-6 md:grid-cols-3">
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-6/genre-film-ikatan-darah-2026.png" alt="genre-film-ikatan-darah-2026" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Genre Film Ikatan Darah 2026: Eksplorasi Action, Thriller, & Crime
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Cari tahu Genre Film Ikatan Darah 2026 sebelum nonton! Kupas tuntas elemen thriller dan crime yang membuat film Ikatan Darah jadi tontonan paling dinanti tahun ini.</p>
+          <a href="/berita/Genre-Film-Ikatan-Darah-2026/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Baca Selengkapnya
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-5/profil-livi-ciananta-film-ikatan-darah.png" alt="profil-livi-ciananta-film-ikatan-darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Siapa Livi Ciananta? Ini Profil & Perannya di Film Ikatan Darah
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Penasaran dengan sosoknya? Inilah Profil Livi Ciananta film Ikatan Darah. Temukan biodata lengkap dan ulasan mengapa aktingnya di film Ikatan Darah begitu memukau penonton!</p>
+          <a href="/berita/Profil-Livi-Ciananta-Film-Ikatan-Darah/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Baca Selengkapnya
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-4/daftar-pemeran-film-ikatan-Darah.jpg" alt="daftar-pemeran-film-ikatan-Darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Daftar Pemeran Film Ikatan Darah: Ada Livi Ciananta & Derby Romero!
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Siapa saja bintang di balik aksi brutal ini? Cek Daftar pemeran film Ikatan Darah terlengkap, mulai dari Livi Ciananta, Derby Romero, hingga Lydia Kandou. Intip profil dan karakter mereka di sini!</p>
+          <a href="/berita/Daftar-pemeran-film-Ikatan-Darah/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Baca Selengkapnya
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  {# SHARE OVERLAY #}
+  <div class="fixed inset-0 z-[10000] hidden bg-black/60" data-share-overlay></div>
+
+  {# SHARE MODAL (center) #}
+  <div class="fixed inset-0 z-[10001] hidden items-center justify-center p-4" data-share-modal>
+    <div class="w-[92%] max-w-[520px] rounded-2xl border border-white/10 bg-white/10 backdrop-blur-md p-6 shadow-[0_20px_80px_rgba(0,0,0,0.65)]">
+      <div class="flex items-center justify-between">
+        <h3 class="text-white text-[16px] md:text-[18px] font-medium">Bagikan</h3>
+
+        <button
+          type="button"
+          class="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/80 hover:text-white"
+          aria-label="Close share"
+          data-share-close
+        >
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+
+      <div class="mt-6 grid grid-cols-3 gap-5">
+
+        <!-- WhatsApp -->
+        <a class="flex flex-col items-center gap-2 text-white/90 hover:text-white"
+          data-share-wa href="#" target="_blank" rel="noopener">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 border border-white/10">
+            <img src="/assets/img/share/whatsapp.png" alt="WhatsApp" class="h-7 w-7" />
+          </span>
+          <span class="text-sm">WhatsApp</span>
+        </a>
+
+        <!-- Instagram -->
+        <a class="flex flex-col items-center gap-2 text-white/90 hover:text-white"
+          href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 border border-white/10">
+            <img src="/assets/img/share/instagram.png" alt="Instagram" class="h-7 w-7" />
+          </span>
+          <span class="text-sm">Instagram</span>
+        </a>
+
+        <!-- Facebook -->
+        <a class="flex flex-col items-center gap-2 text-white/90 hover:text-white"
+          data-share-fb href="#" target="_blank" rel="noopener">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 border border-white/10">
+            <img src="/assets/img/share/facebook.png" alt="Facebook" class="h-7 w-7" />
+          </span>
+          <span class="text-sm">Facebook</span>
+        </a>
+
+        <!-- TikTok -->
+        <a class="flex flex-col items-center gap-2 text-white/90 hover:text-white"
+          href="https://www.tiktok.com/" target="_blank" rel="noopener">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 border border-white/10">
+            <img src="/assets/img/share/tiktok.png" alt="TikTok" class="h-7 w-7" />
+          </span>
+          <span class="text-sm">Tiktok</span>
+        </a>
+
+        <!-- Telegram -->
+        <a class="flex flex-col items-center gap-2 text-white/90 hover:text-white"
+          data-share-tg href="#" target="_blank" rel="noopener">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 border border-white/10">
+            <img src="/assets/img/share/telegram.png" alt="Telegram" class="h-7 w-7" />
+          </span>
+          <span class="text-sm">Telegram</span>
+        </a>
+
+        <!-- Discord -->
+        <a class="flex flex-col items-center gap-2 text-white/90 hover:text-white"
+          href="https://discord.com/" target="_blank" rel="noopener">
+          <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/10 border border-white/10">
+            <img src="/assets/img/share/discord.png" alt="Discord" class="h-7 w-7" />
+          </span>
+          <span class="text-sm">Discord</span>
+        </a>
+
+      </div>
+
+
+      <div class="mt-6">
+        <div class="text-white/70 text-sm mb-2">Link Halaman</div>
+        <div class="flex items-center gap-2 rounded-xl border border-white/10 bg-black/30 px-4 py-3">
+          <input
+            class="w-full bg-transparent text-white/90 outline-none"
+            type="text"
+            readonly
+            data-share-link
+          />
+          <button
+            type="button"
+            class="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-white/80 hover:text-white"
+            aria-label="Copy link"
+            data-share-copy
+          >
+            <i class="bi bi-clipboard"></i>
+          </button>
+        </div>
+
+        <p class="mt-2 text-sm text-emerald-300 hidden" data-share-copied>Link copied!</p>
+      </div>
+    </div>
+  </div>
+
+</main>

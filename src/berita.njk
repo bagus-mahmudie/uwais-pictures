@@ -1,0 +1,159 @@
+---
+layout: layouts/base.njk
+title: Berita
+
+description: Temukan berita terbaru dari Uwais Pictures dengan pembaruan terkini, kisah inspiratif, rilis baru, dan konten eksklusif di balik layar.
+keywords: berita
+socialImage: /assets/img/og-uwais.jpg
+
+permalink: /berita/
+
+lang: id
+translationKey: news
+---
+
+{% set mainNews = [
+  {
+    title: "Genre Film Ikatan Darah 2026: Eksplorasi Action, Thriller, & Crime",
+    excerpt: "Cari tahu Genre Film Ikatan Darah 2026 sebelum nonton! Kupas tuntas elemen thriller dan crime yang membuat film Ikatan Darah jadi tontonan paling dinanti tahun ini.",
+    img: "/assets/img/artikel/artikel-6/genre-film-ikatan-darah-2026.png",
+    alt: "genre-film-ikatan-darah-2026",
+    link: "Genre-Film-Ikatan-Darah-2026/"
+  },
+  {
+    title: "Siapa Livi Ciananta? Ini Profil & Perannya di Film Ikatan Darah",
+    excerpt: "Penasaran dengan sosoknya? Inilah Profil Livi Ciananta film Ikatan Darah. Temukan biodata lengkap dan ulasan mengapa aktingnya di film Ikatan Darah begitu memukau penonton!",
+    img: "/assets/img/artikel/artikel-5/profil-livi-ciananta-film-ikatan-darah.png",
+    alt: "profil-livi-ciananta-film-ikatan-darah",
+    link: "Profil-Livi-Ciananta-Film-Ikatan-Darah/"
+  }
+] %}
+
+
+
+<section class="relative overflow-hidden pb-10 pt-20 mt-10 sm:mt-0 md:mt-20">
+  <div class="mx-auto max-w-6xl px-4 lg:px-0">
+
+    <div class="grid gap-6 lg:grid-cols-2">
+
+      {# LEFT BIG CARD #}
+      <article class="rounded-b-2xl rounded-t-none overflow-hidden bg-uwais-card-soft">
+        <div class="overflow-hidden">
+          <img src="{{ mainNews[0].img }}" alt="{{ mainNews[0].alt }}" class="w-full h-[365px] object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+          <h1 class="text-[24px] font-medium line-clamp-1 text-white mb-3">
+            {{ mainNews[0].title }}
+          </h1>
+          <p class="text-[16px] text-uwais-muted mb-8 line-clamp-2 leading-relaxed">
+            {{ mainNews[0].excerpt }}
+          </p>
+          <a href="{{ mainNews[0].link }}" class="inline-flex items-center text-uwais-red hover:text-white text-[16px]">
+            Baca Selengkapnya <i class="bi bi-arrow-right-short text-[16px]"></i>
+          </a>
+        </div>
+      </article>
+
+      {# RIGHT BIG CARD #}
+      <article class="rounded-b-2xl rounded-t-none overflow-hidden bg-uwais-card-soft">
+        <div class="overflow-hidden">
+          <img src="{{ mainNews[1].img }}" alt="{{ mainNews[1].alt }}" class="w-full h-[365px] object-cover" loading="lazy">
+        </div>
+        <div class="p-5">
+          <h1 class="text-[24px] font-medium line-clamp-1 text-white mb-3">
+            {{ mainNews[1].title }}
+          </h1>
+          <p class="text-[16px] text-uwais-muted mb-8 line-clamp-2 leading-relaxed">
+            {{ mainNews[1].excerpt }}
+          </p>
+          <a href="{{ mainNews[1].link }}" class="inline-flex items-center text-uwais-red hover:text-white text-[16px]">
+            Baca Selengkapnya <i class="bi bi-arrow-right-short text-[16px]"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+  {# ================= ACTION CINEMA INSIGHTS ================= #}
+  <section class="py-0 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-0
+                flex flex-col items-start lg:flex-row lg:items-center lg:justify-between
+                gap-6 lg:gap-4 mb-10">
+      <div class="min-w-0">
+        <h2 class="text-2xl sm:text-3xl lg:text-5xl font-medium">
+          Artikel terkait
+        </h2>
+        <p class="mt-2 text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
+          Temukan wawasan sinema aksi yang mengungkap teknik, tren, dan keahlian di balik pembuatan film.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="max-w-6xl mx-auto px-4 lg:px-0 grid gap-6 md:grid-cols-3">
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-4/daftar-pemeran-film-ikatan-Darah.jpg" alt="daftar-pemeran-film-ikatan-Darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Daftar Pemeran Film Ikatan Darah: Ada Livi Ciananta & Derby Romero!
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Siapa saja bintang di balik aksi brutal ini? Cek Daftar pemeran film Ikatan Darah terlengkap, mulai dari Livi Ciananta, Derby Romero, hingga Lydia Kandou. Intip profil dan karakter mereka di sini!</p>
+          <a href="/berita/Daftar-pemeran-film-Ikatan-Darah/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Baca Selengkapnya
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-3/sinopsis-film-ikatan-darah-uwais-pictures.png" alt="sinopsis-film-ikatan-darah-uwais-pictures" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Sinopsis Film Ikatan Darah (Uwais Pictures) Tayang 30 April 2026
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Terjebak judi online! Simak sinopsis film Ikatan Darah produksi Uwais Pictures. Aksi heroik kakak selamatkan adik dari maut. Cek jadwal tayang!</p>
+          <a href="/berita/sinopsis-film-ikatan-darah-uwais-pictures/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Baca Selengkapnya
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-2/film-ikatan-darah.png" alt="film-ikatan-darah" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Press Conference Film Ikatan Darah: Dari Festival Amerika ke Layar Lebar Indonesia
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Simak rangkuman lengkap press conference film Ikatan Darah. Mengupas idealisme Tata Sidharta, tantangan fisik Iko Uwais, hingga misi sosial di balik film laga terbaru ini.</p>
+          <a href="/berita/press-conference-film-ikatan-darah/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Baca Selengkapnya
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="bg-uwais-card-soft rounded-b-2xl rounded-t-none overflow-hidden flex flex-col">
+        <img src="/assets/img/artikel/artikel-1/daftar-film-uwais-pictures-2025.png" alt="daftar-film-uwais-pictures-2025" class="h-full object-cover">
+        <div class="flex-1 px-5 py-4 flex flex-col">
+          <h3 class="text-[20px] font-medium leading-snug mb-3 line-clamp-2">
+            Daftar Film Uwais Pictures 2025 & Proyek Mendatang Iko Uwais
+          </h3>
+          <p class="mt-0 text-[16px] text-gray-400 line-clamp-2">
+            Cek daftar lengkap film Uwais Pictures 2025! Temukan proyek masa depan Iko Uwais, jadwal rilis, dan bocoran film laga terbaru yang wajib dinanti.</p>
+          <a href="/berita/film-uwais-pictures/" class="mt-4 inline-flex items-center text-[16px] font-medium text-[#E31E26] hover:text-white">
+            Baca Selengkapnya
+            <span class="ml-1 text-[16px]">➜</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ lang or site.lang or 'id' }}">
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if title %}{{ title }} | {{ site.title }}{% else %}{{ site.title }} – Indonesia's Best Action Films{% endif %}
+  </title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {# Basic SEO #}
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="google-site-verification" content="0KZ6k1JdIexJ16TbQ3xUA0luxUf4tC3vknm3LwshX-s" />
+  <meta name="author" content="{{ site.author }}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#050505">
+
+  {% if keywords or site.keywords %}
+    <meta name="keywords" content="{{ keywords or site.keywords }}">
+  {% endif %}
+
+  {# Canonical #}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  {# i18n hreflang #}
+  {% set tKey = translationKey or (page and page.fileSlug) %}
+  {% set url_id = page.url %}
+  {% set url_en = "/en/" %}
+  {% for p in collections.all %}
+    {% if p.data.translationKey == tKey %}
+      {% if p.data.lang == "id" %}{% set url_id = p.url %}{% endif %}
+      {% if p.data.lang == "en" %}{% set url_en = p.url %}{% endif %}
+    {% endif %}
+  {% endfor %}
+  <link rel="alternate" hreflang="id" href="{{ site.url }}{{ url_id }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ url_en }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ url_id }}">
+
+  {# Assets #}
+  <link rel="icon" href="/assets/img/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+
+  {# Social #}
+  {% set seoTitle = title or site.title %}
+  {% set seoDescription = description or site.description %}
+  {% set ogImage = socialImage or site.socialImage %}
+
+  <meta property="og:locale" content="{% if lang == 'en' %}en_US{% else %}id_ID{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ seoTitle }}">
+  <meta property="og:description" content="{{ seoDescription }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ ogImage }}">
+  <meta property="og:image:alt" content="{{ seoTitle }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ seoTitle }}">
+  <meta name="twitter:description" content="{{ seoDescription }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ ogImage }}">
+
+</head>
+
+<body class="bg-uwais-bg text-uwais-text">
+  {% include "partials/header.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer-" ~ (lang or "id") ~ ".njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
+
+<script>
+  let lastScroll = 0;
+  const header = document.getElementById("main-header");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      // Scroll down → hide navbar
+      header.classList.add("-translate-y-full");
+      header.classList.remove("translate-y-0");
+    } else {
+      // Scroll up → show navbar
+      header.classList.remove("-translate-y-full");
+      header.classList.add("translate-y-0");
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>
