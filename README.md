@@ -1,46 +1,46 @@
 # Uwais Pictures
 
-Website rumah produksi Uwais Pictures dengan katalog film, berita, dan halaman berbahasa Indonesia serta Inggris.
+Uwais Pictures production company website featuring a film catalog, news, and pages in Indonesian and English.
 
-**Status:** Live · [Buka website](https://uwaispictures.id/)
+**Status:** Live · [Visit website](https://uwaispictures.id/)
 
-## Fitur
+## Features
 
-- Katalog film dan halaman detail produksi
-- Berita dan informasi perusahaan
-- Formulir kontak melalui endpoint PHP
+- Film catalog and production detail pages
+- News and company information
+- Contact form through a PHP endpoint
 
-## Teknologi
+## Technology
 
 Eleventy 3, Nunjucks, Tailwind CSS 3, PHP / PHPMailer.
 
-## Menjalankan secara lokal
+## Running Locally
 
-Pasang Node.js dan npm sesuai persyaratan dependensi pada `package-lock.json`.
+Install Node.js and npm versions that meet the dependency requirements in `package-lock.json`.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Buka alamat server yang ditampilkan di terminal. Untuk build:
+Open the server address shown in the terminal. To build the site:
 
 ```sh
 npm run build
 ```
 
-Hasil build berada di `_site/`. Folder hasil build tidak menjadi sumber utama repository.
+Build output is written to `_site/`. The build output directory is not the repository's primary source.
 
-## Struktur
+## Structure
 
-- `src/` — halaman, template, data, dan aset.
-- `.eleventy.js` — konfigurasi generator website.
-- `package.json` — dependensi dan perintah pengembangan.
+- `src/` — pages, templates, data, and assets.
+- `.eleventy.js` — site generator configuration.
+- `package.json` — dependencies and development commands.
 
-## Formulir kontak
+## Contact Form
 
-Endpoint `src/api/contact.php` membutuhkan server PHP. Set environment server `MAIL_USERNAME` dan `MAIL_PASSWORD` untuk SMTP. Server preview Eleventy hanya melayani halaman statis; pengiriman email perlu diuji pada server PHP.
+The `src/api/contact.php` endpoint requires a PHP server. Set the `MAIL_USERNAME` and `MAIL_PASSWORD` server environment variables for SMTP. The Eleventy preview server only serves static pages; email delivery must be tested on a PHP server.
 
-## Catatan repository
+## Repository Notes
 
-Dependensi terpasang, cache, file `.env`, database, dan unggahan pengguna tidak disertakan. Nama merek dan aset pihak ketiga tetap mengikuti hak pemiliknya. Tidak ada lisensi penggunaan ulang yang diberikan melalui repository ini.
+Installed dependencies, caches, `.env` files, databases, and user uploads are not included. Brand names and third-party assets remain subject to their respective owners' rights. This repository does not grant a license for reuse.
