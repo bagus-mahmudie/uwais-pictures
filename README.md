@@ -4,6 +4,10 @@ Uwais Pictures production company website featuring a film catalog, news, and pa
 
 **Status:** Live · [Visit website](https://uwaispictures.id/)
 
+## Preview
+
+[![Uwais Pictures — application preview](docs/screenshots/project-preview.png)](docs/screenshots/project-preview.png)
+
 ## Features
 
 - Film catalog and production detail pages
